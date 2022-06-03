@@ -1,0 +1,24 @@
+version: '3.2'
+services:
+  kcb-mysql:
+    image: mysql:5.7.18
+    volumes:
+      - /apps/database/animals/mysql/:/var/lib/mysql/
+    environment:
+      - MYSQL_ROOT_PASSWORD=Maasai2Mara
+      - MYSQL_DATABASE=animals
+      - "TZ=Africa/Nairobi"
+    ports:
+      - 3309:3306
+    command: mysqld --lower_case_table_names=1 --skip-ssl --character_set_server=utf8 --explicit_defaults_for_timestamp
+    restart: always
+  kcb-api:
+      image: pmutisya/kcbapi
+      environment:
+        - SPRING_DATASOURCE_URL=jdbc:mysql://kcb-mysql:3306/animals?useUnicode=true&characterEncoding=utf8&useSSL=false
+        - SPRING_DATASOURCE_USERNAME=root
+        - SPRING_DATASOURCE_PASSWORD=Maasai2Mara
+        - LOGGING_LEVEL_ROOT=INFO
+        - "TZ=Africa/Nairobi"
+      ports:
+          - "8080:8080"

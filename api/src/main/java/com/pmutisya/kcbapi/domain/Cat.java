@@ -1,7 +1,13 @@
 package com.pmutisya.kcbapi.domain;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "cats")
 public class Cat {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     private String name;
