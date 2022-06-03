@@ -1,0 +1,89 @@
+.home {
+  padding-top: 10vh;
+
+  .alert{
+    width: 400px;
+    margin: 10px auto;
+  }
+
+  .btn-create-new{
+    background-color: #0d6efd;
+    padding: 7px 20px;
+    font-size: 0.9rem;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+
+  .card {
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    position: relative;
+
+    h5 {
+      color: #3c4043;
+    }
+
+    span {
+      color: #80868b;
+      font-size: 0.9rem;
+    }
+
+    .cat-color{
+      width: 20px;
+      height: 20px;
+      background-color: #fff;
+      border: 1px solid #3c4043;
+      border-radius: 50%;
+      position: absolute;
+      top: 25px;
+      right: 20px;
+    }
+  }
+
+  form {
+    box-shadow: 0 10px 12px 0 rgba(0,0,0,0.09);
+    border: 1px solid #f1f1f1;
+    padding: 30px;
+    border-radius: 8px;
+
+    h4{
+      color: #5f6063;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    label{
+      color: #5f6063;
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 3px;
+    }
+
+    input,
+    select{
+      border: 2px solid #e1e1e1;
+      margin-bottom: 20px;
+      outline: none;
+      box-shadow: none;
+
+
+      &:hover,
+      &:active,
+      &:focus{
+        border: 2px solid #3c4043;
+
+      }
+    }
+
+    .btn-submit{
+      background-color: #0d6efd;
+      padding: 7px 20px;
+      font-size: 0.9rem;
+      color: #fff;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+  }
+}
